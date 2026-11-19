@@ -2,7 +2,9 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    // "rootDir": "./src",
+    // Cada assunto fica em sua própria pasta (01-..., 02-...).
+    // O build espelha essas pastas dentro de ./dist
+    "rootDir": "./",
     "outDir": "./dist",
 
     // Environment Settings
@@ -40,5 +42,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
